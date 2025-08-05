@@ -1,0 +1,92 @@
+/* Not Found Page Styles */
+
+/* Import component styles used on this page */
+@import '../components/navbar.css';
+@import '../components/footer.css';
+
+/* Page-specific styles */
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.not-found-main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, hsl(var(--muted)), hsl(var(--background)));
+}
+
+.not-found-container {
+  max-width: 36rem;
+  text-align: center;
+}
+
+.not-found-image {
+  width: 12rem;
+  height: 12rem;
+  margin: 0 auto 2rem;
+  animation: bounce-soft 3s ease-in-out infinite;
+}
+
+.not-found-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.not-found-description {
+  font-size: 1.25rem;
+  color: hsl(var(--muted-foreground));
+  font-family: 'Nunito', sans-serif;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.not-found-cta {
+  background: var(--gradient-jungle);
+  color: white;
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  box-shadow: var(--shadow-jungle);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: inline-block;
+}
+
+.not-found-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 20px -3px rgba(34, 197, 94, 0.3), 0 8px 8px -2px rgba(34, 197, 94, 0.2);
+}
+
+.not-found-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.not-found-link {
+  color: hsl(var(--primary));
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.not-found-link:hover {
+  color: hsl(var(--secondary));
+}
+
+.not-found-link-icon {
+  font-size: 1.25rem;
+}

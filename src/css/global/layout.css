@@ -1,0 +1,76 @@
+/* Global Layout Styles */
+
+/* Container styles */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* Section spacing */
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* Common button styles */
+.btn-jungle {
+  background: var(--gradient-jungle);
+  color: hsl(var(--primary-foreground));
+  font-weight: bold;
+  border-radius: 9999px;
+  box-shadow: var(--shadow-jungle);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-jungle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 20px -3px rgba(34, 197, 94, 0.3), 0 8px 8px -2px rgba(34, 197, 94, 0.2);
+}
+
+.btn-sky {
+  background: var(--gradient-sky);
+  color: hsl(var(--secondary-foreground));
+  font-weight: bold;
+  border-radius: 9999px;
+  box-shadow: var(--shadow-playful);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-sky:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 20px -3px rgba(59, 130, 246, 0.3), 0 8px 8px -2px rgba(59, 130, 246, 0.2);
+}

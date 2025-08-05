@@ -1,0 +1,86 @@
+/* Index Page Styles */
+
+/* Import component styles used on this page */
+@import '../components/navbar.css';
+@import '../components/hero-section.css';
+@import '../components/gallery-section.css';
+@import '../components/activities-section.css';
+@import '../components/testimonials-section.css';
+@import '../components/footer.css';
+
+/* Page-specific styles */
+.index-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.index-main {
+  flex-grow: 1;
+}
+
+.index-section {
+  scroll-margin-top: 5rem;
+}
+
+/* Custom section spacing for index page */
+.index-section:not(:first-child) {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .index-section:not(:first-child) {
+    margin-top: 4rem;
+  }
+}
+
+/* Custom animations for index page */
+.index-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.index-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation for sections */
+.index-section:nth-child(1) .index-fade-in { transition-delay: 0.1s; }
+.index-section:nth-child(2) .index-fade-in { transition-delay: 0.2s; }
+.index-section:nth-child(3) .index-fade-in { transition-delay: 0.3s; }
+.index-section:nth-child(4) .index-fade-in { transition-delay: 0.4s; }
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(var(--primary));
+  animation: bounce-soft 2s infinite;
+}
+
+.scroll-indicator-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'Nunito', sans-serif;
+}
+
+.scroll-indicator-arrow {
+  font-size: 1.5rem;
+}
+
+/* Custom background for sections */
+.index-section:nth-child(even) {
+  background-color: hsl(var(--muted));
+}
+
+.index-section:nth-child(odd) {
+  background-color: hsl(var(--background));
+}

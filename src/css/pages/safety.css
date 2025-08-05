@@ -1,0 +1,241 @@
+/* Safety Page Styles */
+
+/* Import component styles used on this page */
+@import '../components/navbar.css';
+@import '../components/footer.css';
+
+/* Page-specific styles */
+.safety-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.safety-main {
+  flex-grow: 1;
+  padding-top: 5rem; /* Account for fixed navbar */
+}
+
+.safety-hero {
+  background: linear-gradient(to bottom right, hsl(var(--secondary)), hsl(220, 100%, 60%));
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.safety-hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.safety-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.safety-hero-description {
+  font-size: 1.25rem;
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+}
+
+.safety-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.safety-section {
+  margin-bottom: 4rem;
+}
+
+.safety-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.safety-section-icon {
+  font-size: 2rem;
+  color: hsl(var(--primary));
+}
+
+.safety-section-description {
+  font-size: 1.125rem;
+  color: hsl(var(--foreground));
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.safety-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .safety-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.safety-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-playful);
+  transition: transform 0.3s;
+}
+
+.safety-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.safety-card-icon {
+  font-size: 2.5rem;
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+}
+
+.safety-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0.75rem;
+}
+
+.safety-card-description {
+  color: hsl(var(--muted-foreground));
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+}
+
+.safety-image-section {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .safety-image-section {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.safety-image-container {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-playful);
+}
+
+.safety-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.safety-image-container:hover .safety-image {
+  transform: scale(1.05);
+}
+
+.safety-image-content {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .safety-image-content {
+    padding: 2rem;
+  }
+}
+
+.safety-image-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.safety-image-description {
+  color: hsl(var(--foreground));
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.safety-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.safety-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+}
+
+.safety-list-icon {
+  color: hsl(var(--primary));
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.safety-cta {
+  background-color: hsl(var(--muted));
+  padding: 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.safety-cta-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.safety-cta-description {
+  font-size: 1.125rem;
+  color: hsl(var(--muted-foreground));
+  font-family: 'Nunito', sans-serif;
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.safety-cta-button {
+  background: var(--gradient-jungle);
+  color: white;
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  box-shadow: var(--shadow-jungle);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: inline-block;
+}
+
+.safety-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 20px -3px rgba(34, 197, 94, 0.3), 0 8px 8px -2px rgba(34, 197, 94, 0.2);
+}

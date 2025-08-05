@@ -1,0 +1,8 @@
+/* Main CSS Entry Point */
+
+/* Import global styles */
+@import './global/index.css';
+
+/* This file serves as the main entry point for all CSS styles.
+   Individual page and component styles are imported directly in their respective files.
+   This approach allows for better organization and easier customization. */
