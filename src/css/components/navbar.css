@@ -112,12 +112,13 @@
 }
 
 .navbar-cta {
-  display: none;
+  display: flex;
+  gap: 20px;
 }
 
 @media (min-width: 1024px) {
   .navbar-cta {
-    display: block;
+    display: flex;
   }
 }
 
